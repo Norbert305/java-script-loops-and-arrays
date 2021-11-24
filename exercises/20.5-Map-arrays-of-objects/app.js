@@ -1,3 +1,7 @@
+let x = function calcAge(dateString) {
+	var birthday = +new Date(dateString);
+	return ~~((Date.now() - birthday) / (31557600000));
+  }
 let people = [
 	{ name: 'Joe', birthDate: new Date(1986,10,24) },
 	{ name: 'Bob', birthDate: new Date(1975,5,24) },
@@ -7,7 +11,7 @@ let people = [
 ];
 
 let simplifier = function(person){
-	return person.name;
+	return 'Hello, my name is '+ person.name + ' and I am '+ x(person.birthDate) + " years old";
 };
 
 console.log(people.map(simplifier));

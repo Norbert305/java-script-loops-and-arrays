@@ -4,6 +4,6 @@ let contact = {
     email: "test@test.com"
 }
 for(let key in contact){
-    // Code goes here
+    console.log(key + ' : ' +contact[key])
 }
 
